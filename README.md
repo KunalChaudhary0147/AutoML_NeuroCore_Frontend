@@ -1,5 +1,11 @@
 # NeuroCore Frontend
 
+![Dashboard UI](src/assets/Dashboard.jpg)
+
+![Values UI 1](src/assets/Values_1.jpg)
+
+![Values UI 2](src/assets/Values_2.jpg)
+
 Frontend for [mlmadeeasy.in](https://mlmadeeasy.in), the public-facing NeuroCore experience.
 
 NeuroCore is built to make machine learning feel practical and approachable. This app presents the product story, highlights the platform, and includes a working ML workbench experience with a leaderboard route for model training and evaluation workflows.
@@ -15,6 +21,19 @@ This repository contains the website frontend for NeuroCore. It is a React singl
 - A leaderboard route for comparing runs and model results
 - Reusable UI primitives from shadcn/ui
 - Responsive, animated sections powered by Framer Motion
+
+## Architecture
+
+The app is organized as a routed React frontend with a simple, maintainable structure:
+
+- `src/main.tsx` mounts the app and loads the global styles.
+- `src/App.tsx` defines the shared providers and route tree.
+- `src/pages/Index.tsx` renders the main landing page experience.
+- `src/pages/Leaderboard.tsx` renders the leaderboard/workbench route.
+- `src/components` contains the modular landing page sections and shared layout pieces.
+- `src/components/ui` contains reusable shadcn/ui building blocks.
+- `src/hooks` contains shared hooks used across the app.
+- `backend` contains the companion server-side project for any API or training workflow integration.
 
 ## Tech Stack
 
@@ -83,7 +102,3 @@ The repository also includes `vercel.json`, so Vercel deployments can be used wi
 
 - This repository is the frontend only. If you are deploying the full product, make sure the backend service is configured separately.
 - The app uses client-side routing, so your hosting provider should serve `index.html` for unknown routes.
-
-## License
-
-Add your preferred license here before publishing the repository publicly.
