@@ -37,8 +37,6 @@ The app is organized as a routed React frontend with a simple, maintainable stru
 
 ## System Workflow
 
-The backend for this website lives at `C:\Users\Kunal\OneDrive\Desktop\Projects\NeuroCore_Backend`.
-
 That backend is a separate C++17 ML engine. The system works in a clear pipeline:
 
 The frontend captures the user's intent, such as dataset actions, model choices, and training requests.
