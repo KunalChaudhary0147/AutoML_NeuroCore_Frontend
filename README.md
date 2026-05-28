@@ -6,6 +6,8 @@
 
 ![Values UI 2](src/assets/Values_2.jpg)
 
+> Core backend implementation details are intentionally private due to ongoing patent-pending work.
+
 Frontend for [mlmadeeasy.in](https://mlmadeeasy.in), the public-facing NeuroCore experience.
 
 NeuroCore is built to make machine learning feel practical and approachable. This app presents the product story, highlights the platform, and includes a working ML workbench experience with a leaderboard route for model training and evaluation workflows.
