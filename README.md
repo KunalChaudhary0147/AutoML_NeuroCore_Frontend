@@ -1,73 +1,89 @@
-# Welcome to your Lovable project
+# NeuroCore Frontend
 
-## Project info
+Frontend for [mlmadeeasy.in](https://mlmadeeasy.in), the public-facing NeuroCore experience.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+NeuroCore is built to make machine learning feel practical and approachable. This app presents the product story, highlights the platform, and includes a working ML workbench experience with a leaderboard route for model training and evaluation workflows.
 
-## How can I edit this code?
+## Overview
 
-There are several ways of editing your application.
+This repository contains the website frontend for NeuroCore. It is a React single-page application built with Vite and TypeScript, styled with Tailwind CSS and shadcn/ui, and wired with route-based navigation for the home page and leaderboard page.
 
-**Use Lovable**
+### What you will find here
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- A polished landing page for mlmadeeasy.in
+- A dedicated ML workbench flow with dataset upload and model analysis UI
+- A leaderboard route for comparing runs and model results
+- Reusable UI primitives from shadcn/ui
+- Responsive, animated sections powered by Framer Motion
 
-Changes made via Lovable will be committed automatically to this repo.
+## Tech Stack
 
-**Use your preferred IDE**
+- React 18
+- TypeScript
+- Vite
+- Tailwind CSS
+- shadcn/ui
+- React Router
+- TanStack Query
+- Framer Motion
+- Recharts
+- Lucide Icons
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Project Structure
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- `src/pages` contains the routed pages
+- `src/components` contains the landing page sections and shared UI pieces
+- `src/components/ui` contains the shadcn/ui component library
+- `src/hooks` contains shared React hooks
+- `backend` contains the companion backend service for local development or deployment workflows
 
-Follow these steps:
+## Getting Started
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Prerequisites
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- Node.js 18 or newer
+- npm, pnpm, yarn, or bun
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Install dependencies
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+npm install
+```
+
+### Run the app locally
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Then open the local URL shown in the terminal, usually `http://localhost:5173`.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Available Scripts
 
-**Use GitHub Codespaces**
+```bash
+npm run dev        # Start the Vite dev server
+npm run build      # Build for production
+npm run preview    # Preview the production build locally
+npm run lint       # Run ESLint
+npm run test       # Run Vitest once
+npm run test:watch # Run Vitest in watch mode
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Deployment
 
-## What technologies are used for this project?
+The frontend is ready to deploy as a standard Vite static site. A common setup is:
 
-This project is built with:
+1. Run `npm run build`.
+2. Deploy the generated `dist` folder to your hosting provider.
+3. Point the domain `mlmadeeasy.in` at the deployed site.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+The repository also includes `vercel.json`, so Vercel deployments can be used without additional routing changes.
 
-## How can I deploy this project?
+## Notes
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+- This repository is the frontend only. If you are deploying the full product, make sure the backend service is configured separately.
+- The app uses client-side routing, so your hosting provider should serve `index.html` for unknown routes.
 
-## Can I connect a custom domain to my Lovable project?
+## License
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Add your preferred license here before publishing the repository publicly.
