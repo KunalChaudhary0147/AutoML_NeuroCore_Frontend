@@ -35,6 +35,38 @@ The app is organized as a routed React frontend with a simple, maintainable stru
 - `src/hooks` contains shared hooks used across the app.
 - `backend` contains the companion server-side project for any API or training workflow integration.
 
+## System Workflow
+
+The backend for this website lives at `C:\Users\Kunal\OneDrive\Desktop\Projects\NeuroCore_Backend`.
+
+That backend is a separate C++17 ML engine. The system works in a clear pipeline:
+
+The frontend captures the user's intent, such as dataset actions, model choices, and training requests.
+
+The backend reads configuration, applies CLI or YAML overrides, and prepares the run.
+
+AutoML selects the model family, optimizer, and learning rate before training starts.
+
+The tensor engine and autodiff graph handle forward execution and gradient propagation.
+
+Model layers execute the selected ANN, CNN, RNN, or Transformer path.
+
+The trainer performs optimization, tracks loss, and records training history.
+
+Finally, the backend exports artifacts such as logs, `loss_curve.csv`, and `graph.dot` for analysis and visualization.
+
+```mermaid
+flowchart LR
+	A[Frontend UI\nmlmadeeasy.in] --> B[Request Capture\nDataset, model, training intent]
+	B --> C[Backend C++17 Engine\nNeuroCore Engine]
+	C --> D[Config + AutoML\nCLI / YAML / model selection]
+	D --> E[Tensor + Autodiff\nForward pass + gradients]
+	E --> F[Model Layers\nANN / CNN / RNN / Transformer]
+	F --> G[Trainer\nLoss, optimizer, history]
+	G --> H[Artifacts\nlogs, loss_curve.csv, graph.dot]
+	H --> I[Results in UI\ncharts, visuals, feedback]
+```
+
 ## Tech Stack
 
 - React 18
